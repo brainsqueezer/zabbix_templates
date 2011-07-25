@@ -1,0 +1,12 @@
+UserParameter=nginx.active,/etc/zabbix/scripts/nginx.pl|cut -f1|cut -d" " -f2
+UserParameter=nginx.requests,/etc/zabbix/scripts/nginx.pl|cut -f2|cut -d" " -f2
+UserParameter=nginx.reading,/etc/zabbix/scripts/nginx.pl|cut -f3|cut -d" " -f2
+UserParameter=nginx.writing,/etc/zabbix/scripts/nginx.pl|cut -f4|cut -d" " -f2
+UserParameter=nginx.waiting,/etc/zabbix/scripts/nginx.pl|cut -f5|cut -d" " -f2
+UserParameter=php.ping,/etc/zabbix/scripts/php-fpm_ping.pl
+UserParameter=php.conn,/etc/zabbix/scripts/php-fpm_status.pl|cut -f1|cut -d" " -f3
+UserParameter=php.idle,/etc/zabbix/scripts/php-fpm_status.pl|cut -f2|cut -d" " -f3
+UserParameter=php.active,/etc/zabbix/scripts/php-fpm_status.pl|cut -f3|cut -d" " -f3
+UserParameter=php.total,/etc/zabbix/scripts/php-fpm_status.pl|cut -f4|cut -d" " -f3
+UserParameter=php.maxchildren,/etc/zabbix/scripts/php-fpm_status.pl|cut -f5|cut -d" " -f3
+UserParameter=mysql.status[*],/etc/zabbix/scripts/mysql_status.pl $1
